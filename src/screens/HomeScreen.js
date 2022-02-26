@@ -12,7 +12,7 @@ const HomeScreen = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios.get("http://localhost:4500/api/v1/products");
+      const { data } = await axios.get(`${process.env.REACT_APP_APIURL}/api/v1/products`);
 
       console.log(data);
       setProducts(data);
